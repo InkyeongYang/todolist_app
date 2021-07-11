@@ -5,6 +5,11 @@ const TODOS_KEY = "todos";
 let toDos = [];
 
 
+if (localStorage.getItem("username") !== null) {
+    toDoForm.classList.remove("hidden"); 
+}
+
+
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
@@ -55,14 +60,8 @@ function handleToDoSubmit(event) {
     paintToDo(newToDosObj);
     saveToDos();
 }
-
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-/*
-function sayHello(item) {
-    //toDoList.innerText(`this is the turn of ${item}`);
-}
-*/
 const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
@@ -72,3 +71,4 @@ if (savedToDos !== null) {
     //parsedToDos.forEach((item) => console.log("this is the turn of", item));  
     parsedToDos.forEach(paintToDo);
 }
+

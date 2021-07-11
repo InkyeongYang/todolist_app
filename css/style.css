@@ -1,5 +1,4 @@
 body, html {
-    /*position: relative;*/
     height: 100%;
     width: 100%;
     margin: 0;
@@ -7,18 +6,10 @@ body, html {
     background-color:#222222;
     opacity: 90%;
     color: #fff;
-    
-    
-    /*
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-height: 100vh;
-    font-size: 1.5rem;
-    */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .hidden {
@@ -75,56 +66,47 @@ body, html {
 }
 
 /*login-form style*/
-
-.form__group {
+.greetingForm_group {
   position: relative;
   padding: 15px 0 0;
   margin: 10px 0;
   width: 100%;
 }
 
-.form__field {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid #fff;
-  outline: 0;
-  font-size: 1.3rem;
-  color: #fff;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
+.form_field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    outline: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+}
 
-  &::placeholder {
-    color: transparent;
-  }
+.greetingForm_group input::placeholder {
+    color: #fff;
+}
 
-  &:placeholder-shown ~ .form__label {
+.greetingForm_group input:focus ~ .greetingForm_label {
     font-size: 1.3rem;
     cursor: text;
     top: 20px;
-  }
+    color: #38ef7d;
 }
 
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #38ef7d;
-}
-
-.form__field:focus {
-  ~ .form__label {
+.greetingForm_label {
     position: absolute;
     top: 0;
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #38ef7d;
-    font-weight:700;    
+    color: #fff;
   }
+
+.form_field:focus {
   padding-bottom: 6px;  
   font-weight: 700;
   border-width: 3px;
@@ -133,36 +115,39 @@ body, html {
 }
 
 /* reset input */
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
-}
+.form_field:required { box-shadow:none; }
+.form_field:invalid { box-shadow:none; }
 
-
-#todo-form {
+#todo-form input{
     border: 0;
-    border-bottom:1px solid #eee;
-}
-
-#todo-box {
-    height: 200px;
-    color: rgb(245, 238, 220);
-}
-
-#todo-text {
-    border: solid 1px lightseagreen;
-    font-size: 20px;
+    border-bottom: 2px solid #fff;
     width: 100%;
-    border: none;
-    outline: none;
-    padding-bottom: 8px;
-    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 45px;
+    height: 50px;
+    text-align: center;
+    padding: 3px;
+    background: transparent;
+    color: #fff;
+}
+
+#todo-form input:focus {
+    outline: 0;
+    color: #38ef7d;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #38ef7d, #1F75FE);
+    border-image-slice: 1;
+}
+
+#todo-form input::placeholder {
+    color: #f5f5f5;
 }
 
 #quote {
     margin: 0;
     position: absolute;
     left: 50%;
-    bottom: 40px;
+    bottom: 50px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 100%;
@@ -174,7 +159,16 @@ body, html {
 footer {
     margin: 0;
     padding: 0;
+    bottom: 0;
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
+}
+
+footer a:link {
+    color: #38ef7d;
+}
+
+footer a:visited {
+    color: rgb(39, 73, 66);
 }
