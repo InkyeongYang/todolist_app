@@ -1,6 +1,8 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const toDoViewBtn = document.getElementById("todo-view");
+const toDoModal = document.getElementById("todo-modal");
 const TODOS_KEY = "todos";
 let toDos = [];
 
@@ -59,8 +61,15 @@ function handleToDoSubmit(event) {
     toDos.push(newToDosObj);
     paintToDo(newToDosObj);
     saveToDos();
+    toDoViewBtn.classList.remove("hidden");
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+//todo 리스트 모달윈도우 여닫기 이벤트 추가
+function handleToDoShow() {
+    toDoModal.style.display = "flex";
+}
+toDoViewBtn.addEventListener("click", handleToDoShow);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
@@ -70,5 +79,10 @@ if (savedToDos !== null) {
     //line54의 내용을 arrow function을 사용해서 축약해서 쓸 수 있다! 
     //parsedToDos.forEach((item) => console.log("this is the turn of", item));  
     parsedToDos.forEach(paintToDo);
+    toDoViewBtn.classList.remove("hidden");
 }
 
+//모달윈도우 닫기
+document.querySelector(".modal-close-btn").onclick = function() {
+    toDoModal.style.display = "none";
+}

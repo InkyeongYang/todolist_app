@@ -50,8 +50,7 @@ body, html {
     transform: translate(-50%, -120%);
     height: 200px;
     width: 800px;
-    
-    font-size: 18ex;
+    font-size: 15ex;
     font-weight: light;
 }
 
@@ -142,6 +141,56 @@ body, html {
 #todo-form input::placeholder {
     color: #f5f5f5;
 }
+
+#todo-view {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #f5f5f5;
+    text-shadow: rgb(39, 73, 66) 1px 0 10px;
+}
+
+/*toDoList를 포시할 모달윈도우 스타일 지정 시작*/
+#todo-modal.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+#todo-modal .modal-window {
+    background: #1d1d1dab;
+    box-shadow: 0 8px 24px 0 rgba(50, 52, 58, 0.164);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 120%;
+    height: 500px;
+    position: relative;
+    top: -120px;
+    padding: 10px;
+}
+#todo-modal .modal-close-btn {
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px gray;
+    color: white;
+}
+#todo-modal .content {
+    margin-top: 30px;
+    padding: 0px 10px;
+    text-shadow: 1px 1px 2px gray;
+    color: white;
+}
+/*toDoList를 포시할 모달윈도우 스타일 지정 끝*/
+
 
 #quote {
     margin: 0;

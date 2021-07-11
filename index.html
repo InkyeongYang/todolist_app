@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>My first JS Web-App</title>
+        <title>VanillaJS App</title>
     </head>
     <body>
         <div class="container">
@@ -20,9 +20,18 @@
                 <form id="todo-form" class="hidden">
                     <input type="text" name="todoText" placeholder="Write a To Do and Press Enter" required/>
                 </form>
-                <div id="todo-box">
-                    <ul id="todo-list"></ul>
+                <!--
+                    <div id="todo-box">
+                        <ul id="todo-list"></ul>
+                    </div>
+                -->
+                <div id="todo-modal" class="modal-overlay">
+                    <div class="modal-window">
+                        <div class="modal-close-btn" ><span>x</span></div>
+                        <ul class="modal-content" id="todo-list"></ul>
+                    </div>
                 </div>
+                <div id="todo-view" class="hidden">View To-Do</div>
             </div>
         </div>
         <div id="quote">
