@@ -48,6 +48,7 @@ function paintToDo(newToDo) {
     li.appendChild(span);
     li.appendChild(delButton);
     toDoList.appendChild(li);
+
 }
 
 function handleToDoSubmit(event) {
@@ -61,7 +62,11 @@ function handleToDoSubmit(event) {
     toDos.push(newToDosObj);
     paintToDo(newToDosObj);
     saveToDos();
+<<<<<<< HEAD
     toDoViewBtn.classList.remove("hidden");
+=======
+
+>>>>>>> c657ffa8ec127cdcfa55a659be18205318e856d1
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
@@ -79,7 +84,16 @@ if (savedToDos !== null) {
     //line54의 내용을 arrow function을 사용해서 축약해서 쓸 수 있다! 
     //parsedToDos.forEach((item) => console.log("this is the turn of", item));  
     parsedToDos.forEach(paintToDo);
+<<<<<<< HEAD
     toDoViewBtn.classList.remove("hidden");
+=======
+    
+    //todo 리스트 모달윈도우 여닫기 이벤트 추가
+    toDoViewBtn.innerText = "View To-Do";
+    toDoViewBtn.onclick = function() {
+        toDoModal.style.display = "flex";
+    }
+>>>>>>> c657ffa8ec127cdcfa55a659be18205318e856d1
 }
 
 //모달윈도우 닫기
