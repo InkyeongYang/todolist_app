@@ -72,11 +72,8 @@ const author = document.querySelector("#quote span:last-child");
  * 3. Math.floor() : 소수점 이하 수 버림.
  */
 function getQuotes() {
-    const numberOfQueotes = quotes.length;
-    //event.preventDefault();
     const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)]; 
     quote.innerText = todaysQuote.quote;
-    author.innerText = todaysQuote.author;
+    author.innerText = `- ${todaysQuote.author}`;
 }
 getQuotes();
-//setInterval(getQuotes, 1000);

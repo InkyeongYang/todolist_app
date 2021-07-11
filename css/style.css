@@ -14,6 +14,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(245, 238, 220);
     text-align: center;
+    margin: 10% 50%;
+    transform: translate(-50%, 0);
+    border: solid 1px brown;
 } 
 
 .content h2 {
@@ -21,7 +24,6 @@ body {
     font-weight: light;
     color: rgb(245, 238, 220);
 }
-
 
 .bgImg {
     position: absolute;
@@ -46,34 +48,9 @@ body {
     box-sizing: border-box;
 }
 
-.text_underline {
-    position: relative;
-    border-top: 1px solid bisque;
-}
-
-.text_underline::before,
-.text_underline::after{
-    position: absolute; 
-    bottom: 0px; /*中央配置*/
-    width: 0px; /*アニメーションで0pxから50%に*/
-    height: 1px; /*高さ*/
-    content: '';
-    background-color: #3be5ae; /*アニメーションの色*/
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-
-/*中央から右へのアニメーション*/
-.text_underline::before{
-    left: 50%; /*中央配置*/
-}
-
-/*中央から左へのアニメーション*/
-.text_underline::after{ 
-    right: 50%; /*中央配置*/
-}
-
-#todo-text:focus + .text_underline::before,
-#todo-text:focus + .text_underline::after{
-    width: 50%;
+#weather {
+    position: absolute; top: 10px; right: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(245, 238, 220);
+ 
 }

@@ -15,7 +15,5 @@ const randomImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
 bgImage.src = `img/${randomImage}`;
-//bgImage.alt = "bg-image";
-//document.body.appendChild(bgImage);
 bgFrame.appendChild(bgImage);
 document.body.appendChild(bgFrame);
