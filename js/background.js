@@ -14,6 +14,7 @@ bgFrame.setAttribute("class", "bgImg");
 const randomImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
-bgImage.src = `img/${randomImage}`;
-bgFrame.appendChild(bgImage);
+//bgImage.src = `img/${randomImage}`;
+//bgFrame.appendChild(bgImage);
+bgFrame.style.backgroundImage = `url(img/${randomImage})`;
 document.body.appendChild(bgFrame);

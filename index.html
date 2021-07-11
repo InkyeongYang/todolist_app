@@ -4,25 +4,38 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Momentum App</title>
+        <title>My first JS Web-App</title>
     </head>
     <body>
-        <div class="content">
+        <div class="container">
             <h2 id="clock"></h2>
-            <form id="login-form" class="hidden">
-                <input required maxlength="15" type="text" placeholder="What is your name?"/>
-                <input type="submit" value="Login" />
-            </form>
-            <h1 id="greeting" class="hidden"></h1>
-            <form id="todo-form">
-                <input required type="text" placeholder="Write a To Do and Press Enter"/>
-                <div class="text_underline"></div>
-            </form>
-            <ul id="todo-list"></ul>
-            <div id="quote">
-                <span></span>
-                <span></span>
+            <div class="content">
+                <form id="login-form" class="form__group field hidden">
+                    <input type="text" class="form__field" id="name" maxlength="15" placeholder="Name" name="name" required />
+                    <label for="name" class="form__label">Name</label>
+                    <input type="submit" value="Login" />
+                </form>
+                
+            <!--
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Name</label>
+                </div>
+            -->
+                
+                <h1 id="greeting" class="hidden"></h1>
+                <form id="todo-form">
+                    <input required type="text" placeholder="Write a To Do and Press Enter"/>
+                    <div class="text_underline"></div>
+                </form>
+                <div id="todo-box">
+                    <ul id="todo-list"></ul>
+                </div>
             </div>
+        </div>
+        <div id="quote">
+            <span></span>
+            <span></span>
         </div>
         <div id="weather">
             <span></span>
@@ -36,4 +49,7 @@
         <script src="js/todo.js"></script>
         <script src="js/weather.js"></script>
     </body>
+    <footer>
+        <p><a href="mailto:yang.inkyeong.dev@gmail.com">Contact me!</a></p>
+    </footer>
 </html>
